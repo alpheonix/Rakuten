@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication2"
-        android:name=".hilt.RakutenTest"
+        android:name=".RakutenTest"
         tools:targetApi="31">
         <activity
             android:name=".ui.screen.accueil.AccueilActivity"
@@ -20,6 +20,7 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.MyApplication2">
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -1,4 +1,4 @@
-package com.example.myapplication2.hilt
+package com.example.myapplication2
 
 import com.example.myapplication2.api.APIService
 import com.example.myapplication2.api.RetrofitInterface

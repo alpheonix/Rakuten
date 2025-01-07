@@ -2,7 +2,6 @@ package com.example.myapplication2.ui.screen.accueil
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -147,7 +146,7 @@ fun DetailProduct(detail: ProductDetail) {
         }
         Spacer(modifier = Modifier.height(50.dp))
         Text(
-            stringResource(R.string.Vendeur)+": "+detail.seller.login,
+            stringResource(R.string.vendeur)+detail.seller.login,
             modifier = Modifier.padding(top = 5.dp, bottom = 20.dp)
         )
         Text(detail.description, fontStyle = FontStyle.Italic)
@@ -159,7 +158,7 @@ fun DetailProduct(detail: ProductDetail) {
 @Composable
 fun SearchList(data: Search, viewModel: AccueilViewModel) {
     if (data.title == "title") {
-        Text("Chargement...")
+        Text(stringResource(R.string.chargement))
     } else {
         LazyColumn {
             items(data.products) { product ->
