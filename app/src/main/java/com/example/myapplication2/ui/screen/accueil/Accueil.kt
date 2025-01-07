@@ -115,7 +115,7 @@ fun MyScreen(viewModel: AccueilViewModel) {
 @Composable
 fun DetailProduct(detail: ProductDetail) {
 
-    Column {
+    Column(modifier = Modifier.padding(10.dp)) {
         Image(
             painter = rememberAsyncImagePainter(detail.images[0].imagesUrls.entry[0].url),
             contentDescription = null,
@@ -146,7 +146,7 @@ fun DetailProduct(detail: ProductDetail) {
         }
         Spacer(modifier = Modifier.height(50.dp))
         Text(
-            stringResource(R.string.vendeur)+detail.seller.login,
+            stringResource(R.string.vendeur) + detail.seller.login,
             modifier = Modifier.padding(top = 5.dp, bottom = 20.dp)
         )
         Text(detail.description, fontStyle = FontStyle.Italic)
@@ -158,7 +158,7 @@ fun DetailProduct(detail: ProductDetail) {
 @Composable
 fun SearchList(data: Search, viewModel: AccueilViewModel) {
     if (data.title == "title") {
-        Text(stringResource(R.string.chargement))
+        Text(stringResource(R.string.chargement), modifier = Modifier.padding(5.dp))
     } else {
         LazyColumn {
             items(data.products) { product ->
@@ -194,10 +194,7 @@ fun ProductItem(searchProduct: SearchProduct, onItemClick: (SearchProduct) -> Un
                 rating = searchProduct.reviewsAverageNote,
 
                 )
-
-
         }
-
     }
 
 }
